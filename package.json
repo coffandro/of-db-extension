@@ -1,0 +1,69 @@
+{
+	"name": "of-db-extension",
+	"description": "A bunch of small scripts to make it easier for us to input data manuallt",
+	"version": "0.0.1",
+	"publisher": "coffandro",
+	"private": true,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/coffandro/of-db-extension"
+	},
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/src/extension",
+	"contributes": {
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.newVariant",
+					"group": "of-db-ext"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "extension.addSize",
+					"group": "of-db-ext"
+				},
+				{
+					"command": "extension.addPurchase",
+					"group": "of-db-ext"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.newVariant",
+				"title": "New Variant"
+			},
+			{
+				"command": "extension.addSize",
+				"title": "Add Size"
+			},
+			{
+				"command": "extension.addPurchase",
+				"title": "Add Purchase Link"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/node": "^22.18.6",
+		"@types/vscode": "^1.100.0",
+		"eslint": "^9.13.0",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.39.0"
+	}
+}
