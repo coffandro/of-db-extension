@@ -57,7 +57,7 @@ async function newVariant(location: any) {
 	
 	variantName = preprocessVariantName(variantName);
 
-	const variantColour = await vscode.window.showInputBox({
+	let variantColour = await vscode.window.showInputBox({
 		placeHolder: 'And what is its colour hex?',
 		ignoreFocusOut: true
 	});
@@ -75,6 +75,10 @@ async function newVariant(location: any) {
 			vscode.window.showErrorMessage("Invalid variant colour, if length of 7 needs to start with #");
 			return;
 		}
+	}
+
+	if (variantColour.length == 6) {
+		variantColour = `#${variantColour}`
 	}
 
 	const newFolder = `${location}/${variantName}`
