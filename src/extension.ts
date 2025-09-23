@@ -188,7 +188,7 @@ async function newMaterial(location: any) {
 
 	await fs.createDirectory(folderURI);
 	
-	const materialFile = folderURI.with({ path: posix.join(folderURI.path, "brand.json") });
+	const materialFile = folderURI.with({ path: posix.join(folderURI.path, "material.json") });
 
 	let materialData = {
 		"material": materialName,
@@ -233,7 +233,7 @@ async function newBrand(location: any) {
 
 	await fs.createDirectory(folderURI);
 	
-	const brandFile = folderURI.with({ path: posix.join(folderURI.path, "material.json") });
+	const brandFile = folderURI.with({ path: posix.join(folderURI.path, "brand.json") });
 
 	let brandData = {
 		"brand": brandName,
