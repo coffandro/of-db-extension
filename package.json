@@ -23,6 +23,18 @@
 				{
 					"command": "extension.newVariant",
 					"group": "of-db-ext"
+				},
+				{
+					"command": "extension.newFilament",
+					"group": "of-db-ext"
+				},
+				{
+					"command": "extension.newMaterial",
+					"group": "of-db-ext"
+				},
+				{
+					"command": "extension.newBrand",
+					"group": "of-db-ext"
 				}
 			],
 			"editor/context": [
@@ -40,6 +52,18 @@
 			{
 				"command": "extension.newVariant",
 				"title": "New Variant"
+			},
+			{
+				"command": "extension.newFilament",
+				"title": "New Filament"
+			},
+			{
+				"command": "extension.newMaterial",
+				"title": "New Material"
+			},
+			{
+				"command": "extension.newBrand",
+				"title": "New Brand"
 			},
 			{
 				"command": "extension.addSize",
